@@ -47,7 +47,7 @@ jobs:
                 az config set extension.use_dynamic_install=yes_without_promt
                 az containerapp registry set -n demo-container -g demo-container --server demovivo.azurecr.io --username ${{ secrets.ACR_USERNAME }} --password ${{ secrets.ACR_PASSWORD }}
                 az containerapp update -n demo-container -g demo-container --cpu 2 --memory 4Gi
-                az containerapp update -n demo-container -g demo-container --image demovivo.azurecr.io/thevivotran/huggingface-azure-acr:${{ github.sha }}
+                az containerapp update -n demo-container -g demo-container --image demovivo.azurecr.io/thevivotran/huggingface-fastapi:${{ github.sha }}
                 
 
 
